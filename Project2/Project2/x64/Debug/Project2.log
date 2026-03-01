@@ -1,0 +1,5 @@
+﻿  practica2_editado.cpp
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\practica2_editado.cpp(17,36): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+  Project2.vcxproj -> C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\x64\Debug\Project2.exe

@@ -1,0 +1,16 @@
+﻿  Mesh.cpp
+  practica2_editado.cpp
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\practica2_editado.cpp(17,36): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+  Shader.cpp
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Shader.cpp(121,24): warning C4267: '=': conversión de 'size_t' a 'GLint'; posible pérdida de datos
+  Window.cpp
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\Project2\Window.cpp(74): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
+  All 376 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Project2.vcxproj -> C:\Users\Asus\Desktop\Todo\CompuGráfica\Project2\x64\Release\Project2.exe
