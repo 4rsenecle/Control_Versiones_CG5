@@ -1,0 +1,21 @@
+﻿  E03_321561556.cpp
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(27,36): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(198,79): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(198,63): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(236,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(236,32): warning C4244:         with
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(236,32): warning C4244:         [
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(236,32): warning C4244:             _Ty=GLfloat
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(236,32): warning C4244:         ]
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(238,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(238,32): warning C4244:         with
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(238,32): warning C4244:         [
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(238,32): warning C4244:             _Ty=GLfloat
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(238,32): warning C4244:         ]
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(245,59): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(334,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\Project3\E03_321561556.cpp(336,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  Project3.vcxproj -> C:\Users\Asus\Desktop\Todo\CompuGráfica\Project3\x64\Debug\Project3.exe
