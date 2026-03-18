@@ -1,45 +1,25 @@
-﻿  Camera.cpp
-  Mesh.cpp
-  E04-321561556.cpp
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(28,36): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(195,79): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(195,63): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(233,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(233,32): warning C4244:         with
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(233,32): warning C4244:         [
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(233,32): warning C4244:             _Ty=GLfloat
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(233,32): warning C4244:         ]
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(235,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(235,32): warning C4244:         with
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(235,32): warning C4244:         [
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(235,32): warning C4244:             _Ty=GLfloat
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(235,32): warning C4244:         ]
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(242,59): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(328,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\E04-321561556.cpp(330,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-  Shader.cpp
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Shader.cpp(131,24): warning C4267: '=': conversión de 'size_t' a 'GLint'; posible pérdida de datos
-  Sphere.cpp
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(39,13): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(43,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(91,50): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(94,51): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(98,50): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Sphere.cpp(108,42): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-  Window.cpp
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(203,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(204,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(208,28): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(209,40): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(211,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(212,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+﻿  P04-321561556.cpp
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(13,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.h(14,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(28,36): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(195,79): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(195,63): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(233,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(233,32): warning C4244:         with
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(233,32): warning C4244:         [
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(233,32): warning C4244:             _Ty=GLfloat
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(233,32): warning C4244:         ]
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(235,32): warning C4244: 'argumento': conversión de 'double' a '_Ty'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(235,32): warning C4244:         with
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(235,32): warning C4244:         [
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(235,32): warning C4244:             _Ty=GLfloat
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(235,32): warning C4244:         ]
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(242,59): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(328,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P04-321561556\P04-321561556\P04-321561556.cpp(330,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   Generando código
-  Previous IPDB not found, fall back to full compilation.
-C:\Users\Asus\source\repos\P04-321561556\P04-321561556\Window.cpp(88): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
-  All 608 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  324 of 609 functions (53.2%) were compiled, the rest were copied from previous compilation.
+    10 functions were new in current compilation
+    27 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   P04-321561556.vcxproj -> C:\Users\Asus\source\repos\P04-321561556\x64\Release\P04-321561556.exe
