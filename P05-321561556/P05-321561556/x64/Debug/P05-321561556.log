@@ -1,0 +1,17 @@
+﻿  Window.cpp
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(214,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(215,22): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(219,28): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(220,40): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(222,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(223,21): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  practica5.cpp
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\practica5.cpp(167,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\practica5.cpp(169,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Generando código...
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.cpp(75,1): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
+  P05-321561556.vcxproj -> C:\Users\Asus\source\repos\P05-321561556\P05-321561556\x64\Debug\P05-321561556.exe

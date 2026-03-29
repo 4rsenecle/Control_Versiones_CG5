@@ -1,0 +1,7 @@
+﻿  E05-321561556.cpp
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\E05-321561556.cpp(167,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\E05-321561556.cpp(169,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  P05-321561556.vcxproj -> C:\Users\Asus\source\repos\P05-321561556\x64\Debug\P05-321561556.exe

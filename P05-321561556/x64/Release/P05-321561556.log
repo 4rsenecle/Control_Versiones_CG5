@@ -1,0 +1,11 @@
+﻿  E05-321561556.cpp
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\E05-321561556.cpp(167,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P05-321561556\P05-321561556\E05-321561556.cpp(169,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Generando código
+  418 of 770 functions (54.3%) were compiled, the rest were copied from previous compilation.
+    28 functions were new in current compilation
+    19 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  P05-321561556.vcxproj -> C:\Users\Asus\source\repos\P05-321561556\x64\Release\P05-321561556.exe
