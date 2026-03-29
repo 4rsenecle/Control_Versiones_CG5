@@ -13,20 +13,7 @@ Window::Window(GLint windowWidth, GLint windowHeight)
 {
 	width = windowWidth;
 	height = windowHeight;
-	rotax = 0.0f;
-	rotay = 0.0f;
-	rotaz = 0.0f;
-	articulacion1 = 0.0f;
-	articulacion2 = 0.0f;
-	articulacion3 = 0.0f;
-	articulacion4 = 0.0f;
-	articulacion5 = 0.0f;
-	articulacion6 = 0.0f;
-	rueda1 = 0.0f;
-	rueda2 = 0.0f;
-	rueda3 = 0.0f;
-	rueda4 = 0.0f;
-
+	muevex = 2.0f;
 	for (size_t i = 0; i < 1024; i++)
 	{
 		keys[i] = 0;
@@ -49,7 +36,7 @@ int Window::Initialise()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	mainWindow = glfwCreateWindow(width, height, "Practica XX: Nombre de la práctica", NULL, NULL);
+	mainWindow = glfwCreateWindow(width, height, "PracticaXX:Nombre de la practica", NULL, NULL);
 
 	if (!mainWindow)
 	{
@@ -92,7 +79,6 @@ void Window::createCallbacks()
 	glfwSetKeyCallback(mainWindow, ManejaTeclado);
 	glfwSetCursorPosCallback(mainWindow, ManejaMouse);
 }
-
 GLfloat Window::getXChange()
 {
 	GLfloat theChange = xChange;
@@ -107,6 +93,9 @@ GLfloat Window::getYChange()
 	return theChange;
 }
 
+
+
+
 void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, int mode)
 {
 	Window* theWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
@@ -115,79 +104,123 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	{
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-
-
-	if (key == GLFW_KEY_E)
+	if (key == GLFW_KEY_Y)
 	{
-		theWindow->rotax += 10.0;
-	}
-	if (key == GLFW_KEY_R)
-	{
-		theWindow->rotay += 10.0; //rotar sobre el eje y 10 grados
-	}
-	if (key == GLFW_KEY_T)
-	{
-		theWindow->rotaz += 10.0;
-	}
-	if (key == GLFW_KEY_F)
-	{
-		theWindow->articulacion1 += 10.0;
-	}
-
-	if (key == GLFW_KEY_G)
-	{
-		theWindow->articulacion2 += 10.0;
-	}
-	if (key == GLFW_KEY_H)
-	{
-		theWindow->articulacion3 += 10.0;
-	}
-	if (key == GLFW_KEY_J)
-	{
-		theWindow->articulacion4 += 10.0;
-	}
-	if (key == GLFW_KEY_K)
-	{
-		theWindow->articulacion5 += 10.0;
-	}
-	if (key == GLFW_KEY_L)
-	{
-		theWindow->articulacion6 += 10.0;
-	}
-	if (key == GLFW_KEY_N) {
-		theWindow->articulacion7 += 10.0;
-	}
-	if (key == GLFW_KEY_M) {
-		theWindow->articulacion8 += 10.0;
-	}
-	if (key == GLFW_KEY_T) {
-		theWindow->cola_sin += 0.4;
-		theWindow->cola = 5*sin(theWindow->cola_sin);
+		theWindow->muevex += 1.0;
 	}
 	if (key == GLFW_KEY_U)
 	{
-		theWindow->rueda1 += 10.0;
+		theWindow->muevex -= 1.0;
 	}
-	if (key == GLFW_KEY_I)
+
+	if (key == GLFW_KEY_H)
 	{
-		theWindow->rueda2 += 10.0;
+		if (theWindow->flag_PDD == 0)
+		{
+			theWindow->PDD += 5;
+		}
+		else
+		{
+			theWindow->PDD -= 5;
+		}
+
+		if (theWindow->PDD == 45) {
+			theWindow->flag_PDD = 1;
+		}
+		else if (theWindow->PDD == -45) {
+			theWindow->flag_PDD = 0;
+		}
 	}
-	if (key == GLFW_KEY_O)
+	if (key == GLFW_KEY_J)
 	{
-		theWindow->rueda3 += 10.0;
+		if (theWindow->flag_PDT == 0)
+		{
+			theWindow->PDT += 5;
+		}
+		else
+		{
+			theWindow->PDT -= 5;
+		}
+
+		if (theWindow->PDT == 45) {
+			theWindow->flag_PDT = 1;
+		}
+		else if (theWindow->PDT == -45) {
+			theWindow->flag_PDT = 0;
+		}
 	}
-	if (key == GLFW_KEY_P)
+
+	if (key == GLFW_KEY_K)
 	{
-		theWindow->rueda4 += 10.0;
+		if (theWindow->flag_PID == 0)
+		{
+			theWindow->PID += 5;
+		}
+		else
+		{
+			theWindow->PID -= 5;
+		}
+
+		if (theWindow->PID == 45) {
+			theWindow->flag_PID = 1;
+		}
+		else if (theWindow->PID == -45) {
+			theWindow->flag_PID = 0;
+		}
+	}
+
+	if (key == GLFW_KEY_L)
+	{
+		if (theWindow->flag_PIT == 0)
+		{
+			theWindow->PIT += 5;
+		}
+		else
+		{
+			theWindow->PIT -= 5;
+		}
+
+		if (theWindow->PIT == 45) {
+			theWindow->flag_PIT = 1;
+		}
+		else if (theWindow->PIT == -45) {
+			theWindow->flag_PIT = 0;
+		}
+
+	}
+
+	if (key == GLFW_KEY_Z)
+	{
+		theWindow->desplazamiento -= 5.0;
+	}
+	if (key == GLFW_KEY_X)
+	{
+		theWindow->ruedas += 10.0;
+	}
+	if (key == GLFW_KEY_C)
+	{
+		theWindow->desplazamiento += 5.0;
+	}
+	if (key == GLFW_KEY_V)
+	{
+		if (theWindow->flag_cofre == 0)
+		{
+			theWindow->cofre += 5;
+		}
+		else
+		{
+			theWindow->cofre -= 5;
+		}
+
+		if (theWindow->cofre == 90) {
+			theWindow->flag_cofre = 1;
+		}
+		else if (theWindow->cofre == 0) {
+			theWindow->flag_cofre = 0;
+		}
 	}
 
 
-
-	if (key == GLFW_KEY_D && action == GLFW_PRESS)
-	{
-		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
-		//printf("se presiono la tecla: %s\n",key_name);
-	}
 
 	if (key >= 0 && key < 1024)
 	{

@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<glew.h>
 #include<glfw3.h>
-#include<math.h>
 
 class Window
 {
@@ -12,46 +11,40 @@ public:
 	int Initialise();
 	GLfloat getBufferWidth() { return bufferWidth; }
 	GLfloat getBufferHeight() { return bufferHeight; }
+	GLfloat getXChange();
+	GLfloat getYChange();
+	GLfloat getmuevex() { return muevex; }
 	bool getShouldClose() {
 		return  glfwWindowShouldClose(mainWindow);}
 	bool* getsKeys() { return keys; }
-	GLfloat getXChange();
-	GLfloat getYChange();
 	void swapBuffers() { return glfwSwapBuffers(mainWindow); }
-	GLfloat getrotay() { return rotay; }
-	GLfloat getrotax() { return rotax; }
-	GLfloat getrotaz() { return rotaz; }
-	GLfloat getarticulacion1() { return articulacion1; }
-	GLfloat getarticulacion2() { return articulacion2; }
-	GLfloat getarticulacion3() { return articulacion3; }
-	GLfloat getarticulacion4() { return articulacion4; }
-	GLfloat getarticulacion5() { return articulacion5; }
-	GLfloat getarticulacion6() { return articulacion6; }
-	GLfloat getarticulacion7() { return articulacion7; }
-	GLfloat getarticulacion8() { return articulacion8; }
-	GLfloat getcola() { return cola;  }
-	GLfloat getrueda1() { return rueda1; }
-	GLfloat getrueda2() { return rueda2; }
-	GLfloat getrueda3() { return rueda3; }
-	GLfloat getrueda4() { return rueda4; }
-
-
+	GLfloat getPDD() { return PDD; }
+	GLfloat getPDT() { return PDT; }
+	GLfloat getPID() { return PID; }
+	GLfloat getPIT() { return PIT; }
+	GLfloat getDesplazamiento() { return desplazamiento; }
+	GLfloat getRuedas() { return ruedas; }
+	GLfloat getCofre() { return cofre; }
+	
 	~Window();
 private: 
 	GLFWwindow *mainWindow;
 	GLint width, height;
-	GLfloat rotax,rotay,rotaz, articulacion1, articulacion2, articulacion3, articulacion4, articulacion5, articulacion6, articulacion7, articulacion8;
-	GLfloat rueda1, rueda2, rueda3, rueda4;
-	GLfloat cola, cola_sin;
 	bool keys[1024];
 	GLint bufferWidth, bufferHeight;
+	void createCallbacks();
 	GLfloat lastX;
 	GLfloat lastY;
 	GLfloat xChange;
 	GLfloat yChange;
+	GLfloat muevex;
+	GLfloat PDD = 0, PDT = 0, PID = 0, PIT = 0;
+	GLfloat flag_PDD = 0, flag_PDT = 0, flag_PID = 0, flag_PIT = 0;
+	GLfloat desplazamiento = 0, ruedas = 0, cofre = 0;
+	GLfloat flag_cofre = 0;
 	bool mouseFirstMoved;
-	void createCallbacks();
 	static void ManejaTeclado(GLFWwindow* window, int key, int code, int action, int mode);
 	static void ManejaMouse(GLFWwindow* window, double xPos, double yPos);
+
 };
 
