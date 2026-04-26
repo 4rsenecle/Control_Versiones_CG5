@@ -38,7 +38,12 @@ const float toRadians = 3.14159265f / 180.0f;
 
 Window mainWindow;
 std::vector<Mesh*> meshList;
-std::vector<Shader> shaderList;
+std::vector<Shader> shaderList; 
+
+GLfloat r_Car;
+GLfloat g_Car;
+GLfloat b_Car;
+
 
 Camera camera;
 
@@ -48,6 +53,7 @@ Texture plainTexture;
 Texture pisoTexture;
 Texture AgaveTexture;
 Texture DadoEmo_T;
+Texture dice_eight;
 
 Model Kitt_M;
 Model Llanta_M;
@@ -267,6 +273,114 @@ void CrearDado()
 }
 
 
+void CrearPiramide_UP()
+{
+	unsigned int piramide_indices[] = {
+		// Base (2 triangles)
+		0, 1, 2,
+		2, 3, 0,
+
+		// Front face
+		4, 5, 6,
+		// Right face
+		7, 8, 9,
+		// Back face
+		10, 11, 12,
+		// Left face
+		13, 14, 15
+	};
+
+	GLfloat piramide_vertices[] = {
+		// x      y      z      S      T       NX     NY     NZ
+
+		// --- BASE (Bottom) --- Normal: [0, -1, 0]
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,   0.0f, -1.0f,  0.0f, // 0
+		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,   0.0f, -1.0f,  0.0f, // 1
+		 0.5f, -0.5f, -0.5f,  1.0f,  1.0f,   0.0f, -1.0f,  0.0f, // 2
+		-0.5f, -0.5f, -0.5f,  0.0f,  1.0f,   0.0f, -1.0f,  0.0f, // 3
+
+		// --- FRONT FACE --- Normal: [0, 0.5, 0.8] approx
+		-0.5f, -0.5f,  0.5f,  0.021f,  0.6511f,   0.0f,  0.44f, -0.89f, // 4
+		 0.5f, -0.5f,  0.5f,  0.21f,  0.6511f,   0.0f,  0.44f, -0.89f, // 5
+		 0.0f,  0.5f,  0.0f,  0.13f,  0.988f,   0.0f,  0.44f, -0.89f, // 6 (Apex)
+
+		 // --- RIGHT FACE --- Normal: [0.8, 0.5, 0] approx
+		 0.5f, -0.5f,  0.5f,  0.267f,  0.6511f,   -0.89f, 0.44f, 0.0f,  // 7
+		 0.5f, -0.5f, -0.5f,  0.464f,  0.6511f,   -0.89f, 0.44f, 0.0f,  // 8
+		 0.0f,  0.5f,  0.0f,  0.36f,  0.988f,   -0.89f, 0.44f, 0.0f,  // 9 (Apex)
+
+		 // --- BACK FACE --- Normal: [0, 0.5, -0.8] approx
+		 0.5f, -0.5f, -0.5f,  0.519f,  0.6511f,   0.0f,  0.44f, 0.89f, // 10
+		 -0.5f, -0.5f, -0.5f,  0.71f,  0.6511f,   0.0f,  0.44f, 0.89f, // 11
+		 0.0f,  0.5f,  0.0f,  0.606f,  0.988f,   0.0f,  0.44f, 0.89f, // 12 (Apex)
+
+		 // --- LEFT FACE --- Normal: [-0.8, 0.5, 0] approx
+		 -0.5f, -0.5f, -0.5f,  0.776f,  0.6511f,  0.89f, 0.44f, 0.0f,  // 13
+		 -0.5f, -0.5f,  0.5f,  0.945f,  0.6511f,  0.89f, 0.44f, 0.0f,  // 14
+		  0.0f,  0.5f,  0.0f,  0.841f,  0.988f,  0.89f, 0.44f, 0.0f   // 15 (Apex)
+	};
+
+	Mesh* piramide = new Mesh();
+	// 16 vertices * 8 floats per vertex = 128
+	// 18 indices (6 for base, 3 per side * 4 sides)
+	piramide->CreateMesh(piramide_vertices, piramide_indices, 128, 18);
+	meshList.push_back(piramide);
+}
+
+void CrearPiramide_DOWN()
+{
+	unsigned int piramide_indices[] = {
+		// Base (2 triangles)
+		0, 1, 2,
+		2, 3, 0,
+
+		// Front face
+		4, 5, 6,
+		// Right face
+		7, 8, 9,
+		// Back face
+		10, 11, 12,
+		// Left face
+		13, 14, 15
+	};
+
+	GLfloat piramide_vertices[] = {
+		// x      y      z      S      T       NX     NY     NZ
+
+		// --- BASE (Bottom) --- Normal: [0, -1, 0]
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,   0.0f, -1.0f,  0.0f, // 0
+		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,   0.0f, -1.0f,  0.0f, // 1
+		 0.5f, -0.5f, -0.5f,  1.0f,  1.0f,   0.0f, -1.0f,  0.0f, // 2
+		-0.5f, -0.5f, -0.5f,  0.0f,  1.0f,   0.0f, -1.0f,  0.0f, // 3
+
+		// --- FRONT FACE --- Normal: [0, 0.5, 0.8] approx
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0465f,   0.0f,  0.44f, -0.89f, // 4
+		 0.5f, -0.5f,  0.5f,  0.196f,  0.0465f,   0.0f,  0.44f, -0.89f, // 5
+		 0.0f,  0.5f,  0.0f,  0.103f,  0.384f,   0.0f,  0.44f, -0.89f, // 6 (Apex)
+
+		 // --- RIGHT FACE --- Normal: [0.8, 0.5, 0] approx
+		 0.5f, -0.5f,  0.5f,  0.267f,  0.0465f,  -0.89f, 0.44f, 0.0f,  // 7
+		 0.5f, -0.5f, -0.5f,  0.464f,  0.0465f,   -0.89f, 0.44f, 0.0f,  // 8
+		 0.0f,  0.5f,  0.0f,  0.36f,  0.384f,   -0.89f, 0.44f, 0.0f,  // 9 (Apex)
+
+		 // --- BACK FACE --- Normal: [0, 0.5, -0.8] approx
+		 0.5f, -0.5f, -0.5f,  0.540f,  0.0232f,   0.0f,  0.44f, 0.89f, // 10
+		 -0.5f, -0.5f, -0.5f,  0.743f,  0.0465f,   0.0f,  0.44f, 0.89f, // 11
+		 0.0f,  0.5f,  0.0f,  0.639f,  0.372f,   0.0f,  0.44f, 0.89f, // 12 (Apex)
+
+		 // --- LEFT FACE --- Normal: [-0.8, 0.5, 0] approx
+		 -0.5f, -0.5f, -0.5f,  0.792f,  0.0581f, 0.89f, 0.44f, 0.0f,  // 13
+		 -0.5f, -0.5f,  0.5f,  0.989f,  0.093f,  0.89f, 0.44f, 0.0f,  // 14
+		  0.0f,  0.5f,  0.0f,  0.885f,  0.441f,  0.89f, 0.44f, 0.0f   // 15 (Apex)
+	};
+
+	Mesh* piramide = new Mesh();
+	// 16 vertices * 8 floats per vertex = 128
+	// 18 indices (6 for base, 3 per side * 4 sides)
+	piramide->CreateMesh(piramide_vertices, piramide_indices, 128, 18);
+	meshList.push_back(piramide);
+}
+
 
 
 int main()
@@ -276,6 +390,8 @@ int main()
 	CreateObjects();
 	CrearDado();
 	CreateShaders();
+	CrearPiramide_UP();
+	CrearPiramide_DOWN();
 
 	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -60.0f, 0.0f, 0.3f, 0.5f);
 
@@ -291,6 +407,8 @@ int main()
 	AgaveTexture.LoadTextureA();
 	DadoEmo_T = Texture("Textures/Cubo_Emociones.tga");
 	DadoEmo_T.LoadTextureA();
+	dice_eight = Texture("Textures/8sideddice.tga");
+	dice_eight.LoadTextureA();
 
 	Kitt_M = Model();
 	Kitt_M.LoadModel("Models/kitt_optimizado.obj");
@@ -312,7 +430,7 @@ int main()
 	Carro_Cofre.LoadModel("Models/Cofre.obj");
 	LampPost = Model();
 	LampPost.LoadModel("Models/LampPost.obj");
-	
+
 
 	std::vector<std::string> skyboxFaces;
 	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_rt.tga");
@@ -341,15 +459,18 @@ int main()
 		0.3f, 0.2f, 0.1f);
 	pointLightCount++;
 
-	
-		// luz de la lampara
+
+	// luz de la lampara
 	pointLights[1] = PointLight(1.0f, 1.0f, 1.0f,
 		5.0f, 0.1f,
 		20.5f, 8.0f, 7.0f,
-		0.1f, 0.3f, 0.02f
+		1.0f, 0.3f, 0.02f
 	);
-		pointLightCount++;
+	pointLightCount++;
+
+
 	unsigned int spotLightCount = 0;
+
 	//linterna
 	spotLights[0] = SpotLight(1.0f, 1.0f, 1.0f,
 		0.0f, 2.0f,
@@ -368,9 +489,18 @@ int main()
 		15.0f);
 	spotLightCount++;
 
+	// faro del helicóptero
+	spotLights[2] = SpotLight(1.0f, 1.0f, 0.0f,
+		1.0f, 2.0f,
+		5.0f, 10.0f, 0.0f,
+		0.0f, -5.0f, 0.0f,
+		0.5f, 0.0f, 0.0f,
+		25.0f);
+	spotLightCount++;
+
 	// faro del coche
 
-	spotLights[2] = SpotLight(0.0f, 0.0f, 1.0f,
+	spotLights[3] = SpotLight(r_Car, g_Car, b_Car,
 		1.0f, 2.0f,
 		5.0f, 10.0f, 0.0f,
 		0.0f, -5.0f, 0.0f,
@@ -378,16 +508,6 @@ int main()
 		10.0f);
 	spotLightCount++;
 
-	
-	// faro del helicóptero
-	spotLights[3] = SpotLight(1.0f, 1.0f, 0.0f,
-		1.0f, 2.0f,
-		5.0f, 10.0f, 0.0f,
-		0.0f, -5.0f, 0.0f,
-		0.5f, 0.0f, 0.0f,
-		25.0f);
-	spotLightCount++;
-	
 
 	//se crean mas luces puntuales y spotlight 
 
@@ -435,9 +555,33 @@ int main()
 		spotLights[0].SetFlash(lowerLight, camera.getCameraDirection());
 		//spotLights[1].SetPos(poscoche + glm::vec(x, y, cofre));
 
+		if (mainWindow.getcolorFaro() == 0) {
+			spotLights[3].SetLight(1.0f, 0.0f, 0.0f);
+		}
+		else if (mainWindow.getcolorFaro() == 1) {
+			spotLights[3].SetLight(1.0f, 1.0f, 0.0f);
+		}
+		else if (mainWindow.getcolorFaro() == 2) {
+			spotLights[3].SetLight(0.0f, 1.0f, 0.0f);
+		}
+		else if (mainWindow.getcolorFaro() == 3) {
+			spotLights[3].SetLight(0.0f, 1.0f, 1.0f);
+		}
+		else if (mainWindow.getcolorFaro() == 4) {
+			spotLights[3].SetLight(0.0f, 0.0f, 1.0f);
+		}
+		else if (mainWindow.getcolorFaro() == 5) {
+			spotLights[3].SetLight(1.0f, 0.0f, 1.0f);
+		}
+
 		//información al shader de fuentes de iluminación
 		shaderList[0].SetDirectionalLight(&mainLight);
-		shaderList[0].SetPointLights(pointLights, pointLightCount);
+		if (mainWindow.getapagarLampara() == 1) {
+			shaderList[0].SetPointLights(pointLights, pointLightCount - 1);
+		}
+		else {
+			shaderList[0].SetPointLights(pointLights, pointLightCount);
+		}
 		shaderList[0].SetSpotLights(spotLights, spotLightCount);
 
 
@@ -517,7 +661,7 @@ int main()
 		carLight.x += 1.5f;
 		carLight.y += 0.75f;
 		carLight.z -= 3.5f;
-		spotLights[2].SetFlash(carLight, glm::vec3(-1.0f, 0.0f, 0.0f));
+		spotLights[3].SetFlash(carLight, glm::vec3(-1.0f, 0.0f, 0.0f));
 
 		// Llanta derecha frontal
 		model = glm::translate(model, glm::vec3(-0.3f, 0.3f, -0.4f));
@@ -574,7 +718,7 @@ int main()
 		
 		// luz amarilla
 		glm::vec3 heliLight = glm::vec3(0.0f + mainWindow.getmuevex_heli(), 5.0f, 6.0f);
-		spotLights[3].SetFlash(heliLight, glm::vec3(0.0f, -1.0f, 0.0f));
+		spotLights[2].SetFlash(heliLight, glm::vec3(0.0f, -1.0f, 0.0f));
 		
 
 		model = glm::mat4(1.0);
@@ -612,6 +756,24 @@ int main()
 		LampPost.RenderModel();
 		model = modelaux;
 		
+		// dado de 8 caras
+		model = glm::mat4(1.0);
+
+		model = glm::translate(model, glm::vec3(-0.0f, 20.0f, 3.0f));
+		modelaux = model;
+		model = glm::scale(model, glm::vec3(4.0f, 4.00f, 4.00f));
+
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		dice_eight.UseTexture();
+		meshList[5]->RenderMesh();
+
+		model = modelaux;
+		model = glm::translate(model, glm::vec3(-0.0f, -4.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(4.0f, 4.00f, 4.00f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		dice_eight.UseTexture();
+		meshList[6]->RenderMesh();
 
 		glUseProgram(0);
 

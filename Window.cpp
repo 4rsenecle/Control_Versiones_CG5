@@ -115,11 +115,69 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	if (key == GLFW_KEY_O)
 	{
 		theWindow->muevex_heli += 1.5;
+		theWindow->heli_dir = 1;
 	}
 	if (key == GLFW_KEY_P)
 	{
 		theWindow->muevex_heli -= 1.5;
+		theWindow->heli_dir = -1;
 	}
+	if (key == GLFW_KEY_X&& action==GLFW_PRESS) {
+		if (theWindow->apagarLampara == 1) {
+			theWindow->apagarLampara = 0;
+		}
+		else {
+			theWindow->apagarLampara = 1;
+		}
+		printf("BOTÓN X");
+		printf("-----------------------------------------------");
+		printf("apagarLampara = %d\n", theWindow->apagarLampara);
+		printf("apagarLampara2 = %d\n", theWindow->apagarLampara2);
+	}
+	if (key == GLFW_KEY_Z && action == GLFW_PRESS) {
+		if (theWindow->apagarLampara2 == 1) {
+			theWindow->apagarLampara2 = 0;
+		}
+		else {
+			theWindow->apagarLampara2 = 1;
+		}
+		printf("BOTÓN Z");
+		printf("-----------------------------------------------");
+		printf("apagarLampara = %d\n", theWindow->apagarLampara);
+		printf("apagarLampara2 = %d\n", theWindow->apagarLampara2);
+	}
+	if (key == GLFW_KEY_0 && action == GLFW_PRESS) {
+		if (theWindow->colorFaro == 5) {
+			theWindow->colorFaro = -1;
+		}
+		theWindow->colorFaro++;
+		printf("colorFaro = %d\n", theWindow->colorFaro);
+	}
+
+	if (key == GLFW_KEY_Q && action == GLFW_PRESS) {
+		theWindow->y_Pez += 0.5f;
+		theWindow->z_Pez += 0.5f;
+	}
+	if (key == GLFW_KEY_E && action == GLFW_PRESS) {
+		theWindow->y_Pez -= 0.5f;
+		theWindow->z_Pez -= 0.5f;
+	}
+	if (key == GLFW_KEY_B && action == GLFW_PRESS) {
+		theWindow->x = 1;
+		theWindow->y = 0;
+		theWindow->z = 0;
+	}
+	if (key == GLFW_KEY_N && action == GLFW_PRESS) {
+		theWindow->x = 0;
+		theWindow->y = 1;
+		theWindow->z = 0;
+	}
+	if (key == GLFW_KEY_M && action == GLFW_PRESS) {
+		theWindow->x = 0;
+		theWindow->y = 0;
+		theWindow->z = 1;
+	}
+
 
 
 
