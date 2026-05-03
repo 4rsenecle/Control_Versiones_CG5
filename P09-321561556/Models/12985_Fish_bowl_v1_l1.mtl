@@ -1,0 +1,32 @@
+# Blender 5.1.1 MTL File: 'None'
+# www.blender.org
+
+newmtl 12985_fish_bowl_Castle
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.090000 0.090000 0.090000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 12985_fish_bowl_Castle_diff.jpg
+
+newmtl 12985_fish_bowl_bowl
+Ns 448.421570
+Ka 1.000000 1.000000 1.000000
+Kd 0.622467 0.738884 0.747260
+Ks 0.720000 0.720000 0.720000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.187500
+illum 9
+
+newmtl 12985_fish_bowl_gravel
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.090000 0.090000 0.090000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd 12985_fish_bowl_gravel_diff.jpg

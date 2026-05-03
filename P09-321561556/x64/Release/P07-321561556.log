@@ -1,0 +1,13 @@
+﻿  P07-321561556.cpp
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\P07-321561556.cpp(107,24): warning C4267: 'inicializando': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\P07-321561556.cpp(333,9): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\P07-321561556.cpp(402,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Asus\source\repos\P07-321561556\P07-321561556\P07-321561556.cpp(404,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Generando código
+  1 of 1088 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    7 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  P07-321561556.vcxproj -> C:\Users\Asus\source\repos\P07-321561556\x64\Release\P07-321561556.exe
